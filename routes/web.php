@@ -17,3 +17,12 @@ use App\Http\Controllers\EmployeeController;
 */
 // route awal
 Route::get('/', function () { return view('welcome');});
+
+// route home
+Route::get('home', [HomeController::class, 'index'])->name('home');
+
+// route profile
+Route::get('profile', ProfileController::class)->name('profile');
+
+// route emplyoyee
+Route::resource('employees', EmployeeController::class);
